@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">YOUR NAME</a>
+      <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li>
+          <a href="research.html">Research</a>
+          <div class="dropdown">
+            <a href="research.html#publications">Publications</a>
+            <a href="research.html#wip">Work in Progress</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Community</a>
+          <div class="dropdown">
+            <a href="#">Workshop 2025</a>
+            <a href="#">Reading Group</a>
+            <a href="#">Mentoring</a>
+          </div>
+        </li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li>
+          <a href="#">Misc</a>
+          <div class="dropdown">
+            <a href="#">Links</a>
+            <a href="#">Personal</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Curriculum Vitae</h1>
+    </div>
+
+    <div class="section-block">
+      <p>
+        You can download a PDF version of my CV
+        <a href="#">here</a>.
+      </p>
+    </div>
+
+    <div class="section-block">
+      <h2>Education</h2>
+      <div class="pub-item">
+        <div class="pub-title">Ph.D. / MPhil in [Field]</div>
+        <div class="pub-venue">[University], Expected [Year]</div>
+        <p style="margin-top: 4px; font-size: 0.94rem;">Dissertation: <em>[Title]</em></p>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">M.A. / MSci in [Field]</div>
+        <div class="pub-venue">[University], [Year]</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">B.A. / BSc in [Field]</div>
+        <div class="pub-venue">[University], [Year]</div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2>Positions</h2>
+      <div class="pub-item">
+        <div class="pub-title">[Current Position]</div>
+        <div class="pub-venue">[Department], [University], [Year]–present</div>
+      </div>
+      <div class="pub-item">
+        <div class="pub-title">[Previous Position]</div>
+        <div class="pub-venue">[Department], [University], [Year]–[Year]</div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2>Awards &amp; Grants</h2>
+      <ul>
+        <li>[Award Name], [Granting Body], [Year]</li>
+        <li>[Fellowship/Scholarship Name], [Year]</li>
+        <li>[Travel Grant], [Year]</li>
+      </ul>
+    </div>
+
+    <div class="section-block">
+      <h2>Service</h2>
+      <ul>
+        <li>[Role], [Organisation], [Year]–[Year]</li>
+        <li>[Role], [Organisation], [Year]–present</li>
+        <li>Referee for [Journal 1], [Journal 2]</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 [Your Name]. All rights reserved.
+  </footer>
+
+</body>
+</html>

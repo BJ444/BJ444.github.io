@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Academic Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">YOUR NAME</a>
+      <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li>
+          <a href="research.html">Research</a>
+          <div class="dropdown">
+            <a href="research.html#publications">Publications</a>
+            <a href="research.html#wip">Work in Progress</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Community</a>
+          <div class="dropdown">
+            <a href="#">Workshop 2025</a>
+            <a href="#">Reading Group</a>
+            <a href="#">Mentoring</a>
+          </div>
+        </li>
+        <li>
+          <a href="teaching.html">Teaching</a>
+        </li>
+        <li><a href="cv.html">CV</a></li>
+        <li>
+          <a href="#">Misc</a>
+          <div class="dropdown">
+            <a href="#">Links</a>
+            <a href="#">Personal</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="home-grid">
+      <div class="home-photo">
+        <!-- Replace src with your photo -->
+        <img src="https://placehold.co/540x680/c2d4be/1e2a1e?text=Your+Photo" alt="Your portrait photo">
+        <p class="photo-caption">[Photo description: placeholder — replace with your own.]</p>
+      </div>
+
+      <div class="home-bio">
+        <h1>Hello, I'm [Your Name]</h1>
+
+        <p>
+          I am a [title/position] in the Department of
+          <a href="#">[Department Name]</a> at [University].
+          I primarily work on [research area 1] and [research area 2].
+        </p>
+
+        <p>
+          My research focuses on [brief description of your main research
+          programme — 2-3 sentences explaining what you do and why it
+          matters]. Read more about my research <a href="research.html">here</a>.
+        </p>
+
+        <p>
+          I'm passionate about [community/service work — 1-2 sentences
+          about workshops, mentoring, outreach, etc.].
+          Read more about this work <a href="#">here</a>.
+        </p>
+
+        <p>
+          In teaching, I [brief teaching philosophy — 1-2 sentences].
+          Read more about my teaching <a href="teaching.html">here</a>.
+        </p>
+
+        <p>
+          I received my [highest degree] from <a href="#">[University]</a>.
+          Before that, I studied at <a href="#">[University]</a> and
+          <a href="#">[University]</a>.
+        </p>
+
+        <p>
+          <a href="cv.html">Here</a> is my CV, and
+          <a href="#">here</a> is my Google Scholar profile.
+        </p>
+
+        <div class="contact-line">
+          <p>
+            My name ([Your Name]) is pronounced roughly as [pronunciation guide].
+            I use [pronouns].
+          </p>
+          <p style="margin-top: 8px;">
+            Email: <a href="mailto:your.email@university.ac.uk">your.email@university.ac.uk</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 [Your Name]. All rights reserved.
+  </footer>
+
+</body>
+</html>

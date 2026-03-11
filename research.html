@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">YOUR NAME</a>
+      <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li>
+          <a href="research.html">Research</a>
+          <div class="dropdown">
+            <a href="research.html#publications">Publications</a>
+            <a href="research.html#wip">Work in Progress</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Community</a>
+          <div class="dropdown">
+            <a href="#">Workshop 2025</a>
+            <a href="#">Reading Group</a>
+            <a href="#">Mentoring</a>
+          </div>
+        </li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li>
+          <a href="#">Misc</a>
+          <div class="dropdown">
+            <a href="#">Links</a>
+            <a href="#">Personal</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Research</h1>
+    </div>
+
+    <div class="section-block">
+      <p>
+        Brief overview of your research interests and approach — 2-3 sentences
+        explaining the big picture of what drives your work.
+      </p>
+    </div>
+
+    <div class="section-block" id="publications">
+      <h2>Publications</h2>
+
+      <div class="pub-item">
+        <div class="pub-title">Title of Your Paper</div>
+        <div class="pub-venue">Journal Name, Volume(Issue), Year, pp. XX–XX</div>
+        <div class="pub-links">
+          <a href="#">[PDF]</a>
+          <a href="#">[Journal]</a>
+          <a href="#">[PhilPapers]</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Another Paper Title</div>
+        <div class="pub-venue">Edited Volume, eds. A. Editor &amp; B. Editor, Publisher, Year</div>
+        <div class="pub-links">
+          <a href="#">[PDF]</a>
+          <a href="#">[Publisher]</a>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">A Third Paper You Wrote</div>
+        <div class="pub-venue">Journal of Something, forthcoming</div>
+        <div class="pub-links">
+          <a href="#">[Preprint]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block" id="wip">
+      <h2>Work in Progress</h2>
+
+      <div class="pub-item">
+        <div class="pub-title">Working Title of Current Project</div>
+        <p style="margin-top: 6px; font-size: 0.94rem;">
+          Brief description of the project — what question it addresses,
+          what methods you're using, and where it stands.
+        </p>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Another Work in Progress</div>
+        <p style="margin-top: 6px; font-size: 0.94rem;">
+          Brief description of the project.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2>Talks &amp; Presentations</h2>
+      <p>A selection of recent and upcoming talks:</p>
+      <ul>
+        <li>"Talk Title," Conference Name, Location, Month Year</li>
+        <li>"Another Talk," Workshop Name, Location, Month Year</li>
+        <li>"Invited Talk Title," Department Colloquium, University, Month Year</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 [Your Name]. All rights reserved.
+  </footer>
+
+</body>
+</html>
