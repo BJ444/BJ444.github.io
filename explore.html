@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore — Binjie Zou</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bakery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .bakery-card {
+      background: var(--color-card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(30,42,30,0.07);
+      border: 1px solid var(--color-border);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .bakery-card:hover {
+      box-shadow: 0 6px 20px rgba(30,42,30,0.12);
+      transform: translateY(-2px);
+    }
+    .bakery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .bakery-card .bakery-info {
+      padding: 16px;
+    }
+    .bakery-card .bakery-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .bakery-card .bakery-desc {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      .bakery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="explore">
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">BINJIE ZOU</a>
+      <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li>
+          <a href="research.html">Research</a>
+          <div class="dropdown">
+            <a href="research.html#publications">Publications</a>
+            <a href="research.html#wip">Work in Progress</a>
+          </div>
+        </li>
+        <li>
+          <a href="community.html">Community</a>
+          <div class="dropdown">
+            <a href="https://www.lse.ac.uk/philosophy/equity-diversity-and-inclusion/map-chapter">MAP</a>
+            <a href="https://www.lse.ac.uk/philosophy/events/seminar-series">SERG</a>
+            <a href="https://reproducibilitea.org/journal-clubs/#LSE">LSE ReproducibiliTea</a>
+          </div>
+        </li>
+        <li>
+          <a href="explore.html">Explore</a>
+          <div class="dropdown">
+            <a href="explore.html#bakeries">Bakery Map in London</a>
+            <a href="explore.html#personal">Personal</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Explore</h1>
+    </div>
+
+    <div class="section-block" id="bakeries">
+      <h2>Bakery Map in London</h2>
+      <p>
+        Some of my favourite pastry spots in London — perfect for a post-seminar treat or a reading group snack run.
+      </p>
+
+      <div class="bakery-grid">
+        <div class="bakery-card">
+          <!-- Replace src with your own photo -->
+          <img src="https://placehold.co/400x280/c2d4be/1e2a1e?text=Pastry+1" alt="Pastry photo 1">
+          <div class="bakery-info">
+            <div class="bakery-name">[Bakery Name 1]</div>
+            <div class="bakery-desc">[Description — what you love about this place, what to order, where it is.]</div>
+          </div>
+        </div>
+
+        <div class="bakery-card">
+          <!-- Replace src with your own photo -->
+          <img src="https://placehold.co/400x280/dbb8b0/2b2020?text=Pastry+2" alt="Pastry photo 2">
+          <div class="bakery-info">
+            <div class="bakery-name">[Bakery Name 2]</div>
+            <div class="bakery-desc">[Description — what you love about this place, what to order, where it is.]</div>
+          </div>
+        </div>
+
+        <div class="bakery-card">
+          <!-- Replace src with your own photo -->
+          <img src="https://placehold.co/400x280/a8c8d8/1e2630?text=Pastry+3" alt="Pastry photo 3">
+          <div class="bakery-info">
+            <div class="bakery-name">[Bakery Name 3]</div>
+            <div class="bakery-desc">[Description — what you love about this place, what to order, where it is.]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block" id="personal">
+      <h2>Personal</h2>
+      <p>
+        [Placeholder — add anything personal you'd like to share here.]
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Binjie Zou. All rights reserved.
+  </footer>
+
+</body>
+</html>
