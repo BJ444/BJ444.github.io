@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore — Binjie Zou</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bakery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .bakery-card {
+      background: var(--color-card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(30,42,30,0.07);
+      border: 1px solid var(--color-border);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .bakery-card:hover {
+      box-shadow: 0 6px 20px rgba(30,42,30,0.12);
+      transform: translateY(-2px);
+    }
+    .bakery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .bakery-card .bakery-info {
+      padding: 16px;
+    }
+    .bakery-card .bakery-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .bakery-card .bakery-desc {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      .bakery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="explore">
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">BINJIE ZOU</a>
+      <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li>
+          <a href="research.html">Research</a>
+          <div class="dropdown">
+            <a href="research.html#publications">Publications</a>
+            <a href="research.html#wip">Work in Progress</a>
+          </div>
+        </li>
+        <li>
+          <a href="community.html">Community</a>
+          <div class="dropdown">
+            <a href="https://www.lse.ac.uk/philosophy/equity-diversity-and-inclusion/map-chapter">MAP</a>
+            <a href="https://www.lse.ac.uk/philosophy/events/seminar-series">SERG</a>
+            <a href="https://reproducibilitea.org/journal-clubs/#LSE">LSE ReproducibiliTea</a>
+          </div>
+        </li>
+        <li>
+          <a href="explore.html">Explore</a>
+          <div class="dropdown">
+            <a href="explore.html#bakeries">Bakery Map in London</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Explore</h1>
+    </div>
+
+    <div class="section-block" id="bakeries">
+      <h2>Bakery Map in London</h2>
+      <p>
+        Good pastries stimulate good discussions. Below are some of our favourites for reading groups:
+      </p>
+
+      <div class="bakery-grid">
+        <div class="bakery-card">
+          <img src="okja.jpeg" alt="Okja bakery display with pastries and swirls">
+          <div class="bakery-info">
+            <div class="bakery-name"><a href="https://www.google.com/maps/search/okja+london" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--color-sage);">Okja!</a></div>
+            <div class="bakery-desc">My favourite plant-based bakery in London. 
+              A great variety of options from pistachio swirls to sausage rolls, with no added vegan tax!</div>
+          </div>
+        </div>
+        <div class="bakery-card">
+          <img src="breadary.jpeg" alt="Breadary bakery counter with fresh pastries">
+          <div class="bakery-info">
+            <div class="bakery-name"><a href="https://www.google.com/maps/place/Breadery/@51.5276585,-0.0541782,13.33z" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--color-sage);">Breadary</a></div>
+            <div class="bakery-desc">Their potato, harissa and cheese twist is great. Everything is made fresh on-site too.</div>
+          </div>
+        </div>
+        <div class="bakery-card">
+          <img src="crosstown.jpeg" alt="Crosstown Doughnuts display case">
+          <div class="bakery-info">
+            <div class="bakery-name"><a href="https://www.google.com/maps/search/crosstown+donuts+london+cannon+street" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--color-sage);">Crosstown Doughnuts</a></div>
+            <div class="bakery-desc">All vegan. Everything is good.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px;">
+        <h3 style="font-family: var(--font-display); margin-bottom: 16px;">Bakery Map</h3>
+        <div id="map" style="width: 100%; height: 500px; border-radius: 8px; border: 1px solid var(--color-border);"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Binjie Zou. All rights reserved.
+  </footer>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    const map = L.map('map').setView([51.516, -0.075], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    function svgIcon(svg, size) {
+      return L.divIcon({
+        html: svg,
+        className: '',
+        iconSize: [size, size],
+        iconAnchor: [size/2, size/2],
+        popupAnchor: [0, -size/2]
+      });
+    }
+
+    // LSE Lakatos Building - book icon
+    const lseIcon = L.divIcon({
+      html: '<div style="font-size: 32px;">😋</div>',
+      className: '',
+      iconSize: [36, 36],
+      iconAnchor: [18, 18],
+      popupAnchor: [0, -18]
+    });
+
+    // Cinnamon bun for Okja
+    const okjaIcon = svgIcon(`
+      <svg viewBox="0 0 72 82" xmlns="http://www.w3.org/2000/svg">
+        <text x="36" y="30" text-anchor="middle" font-size="32">🥐</text>
+        <rect x="6" y="42" width="60" height="28" rx="14" fill="#5a8a5e" stroke="#fff" stroke-width="1.5"/>
+        <text x="36" y="61" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold" font-family="sans-serif">Okja!</text>
+      </svg>`, 72);
+
+    // Focaccia/bread for Breadary
+    const breadaryIcon = svgIcon(`
+      <svg viewBox="0 0 72 82" xmlns="http://www.w3.org/2000/svg">
+        <text x="36" y="30" text-anchor="middle" font-size="32">🥖</text>
+        <rect x="2" y="42" width="68" height="28" rx="14" fill="#dbb8b0" stroke="#fff" stroke-width="1.5"/>
+        <text x="36" y="61" text-anchor="middle" fill="#2b2020" font-size="10" font-weight="bold" font-family="sans-serif">Breadary</text>
+      </svg>`, 72);
+
+    // Donut for Crosstown
+    const crosstownIcon = svgIcon(`
+      <svg viewBox="0 0 72 82" xmlns="http://www.w3.org/2000/svg">
+        <text x="36" y="30" text-anchor="middle" font-size="32">🍩</text>
+        <rect x="2" y="42" width="68" height="28" rx="14" fill="#a8c8d8" stroke="#fff" stroke-width="1.5"/>
+        <text x="36" y="61" text-anchor="middle" fill="#1e2630" font-size="8" font-weight="bold" font-family="sans-serif">Crosstown</text>
+      </svg>`, 72);
+
+    const lse = [51.5135, -0.1156];
+    const bakeries = [
+      { name: 'Okja!', coords: [51.5178, -0.0723], color: '#5a8a5e', icon: okjaIcon, desc: 'Croissants & vegan pastries 🥐' },
+      { name: 'Breadary', coords: [51.5319, -0.0344], color: '#dbb8b0', icon: breadaryIcon, desc: 'Fresh focaccia & cheese twists 🥖' },
+      { name: 'Crosstown Doughnuts', coords: [51.5116, -0.0907], color: '#a8c8d8', icon: crosstownIcon, desc: 'Artisan vegan doughnuts 🍩' }
+    ];
+
+    L.marker(lse, { icon: lseIcon }).addTo(map)
+      .bindTooltip('LSE Lakatos Building', { direction: 'top', offset: [0, -10] });
+
+    bakeries.forEach(b => {
+      L.marker(b.coords, { icon: b.icon }).addTo(map)
+        .bindPopup('<strong>' + b.name + '</strong>');
+
+      // Cute dashed lines connecting LSE to each bakery
+      const line = L.polyline([lse, b.coords], {
+        color: b.color,
+        weight: 4,
+        dashArray: '10,8',
+        opacity: 0.8
+      }).addTo(map);
+
+      // Animated dots along the path
+      const midLat = (lse[0] + b.coords[0]) / 2;
+      const midLng = (lse[1] + b.coords[1]) / 2;
+      L.marker([midLat, midLng], {
+        icon: L.divIcon({
+          html: '<div style="font-size: 16px; animation: bounce 1.5s infinite;">🚶‍♀️</div>',
+          className: '',
+          iconSize: [20, 20],
+          iconAnchor: [10, 10]
+        })
+      }).addTo(map);
+    });
+  </script>
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
