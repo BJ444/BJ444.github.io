@@ -82,20 +82,20 @@ body[data-page="research"] nav ul li .dropdown { background: #b8cfb0; }
 body[data-page="research"] nav ul li .dropdown a { color: #2b3a2b; }
 body[data-page="research"] nav ul li .dropdown a:hover { background: rgba(255,255,255,0.25); }
 
-body[data-page="community"] nav { background: #dbb8b0; box-shadow: 0 1px 6px rgba(60,30,30,0.10); }
-body[data-page="community"] nav .site-name { color: #2b2020; }
-body[data-page="community"] nav ul li > a { color: #3a2b2b; }
-body[data-page="community"] nav ul li > a:hover { background: rgba(255,255,255,0.3); color: #2b2020; }
-body[data-page="community"] nav ul li .dropdown { background: #dbb8b0; }
-body[data-page="community"] nav ul li .dropdown a { color: #3a2b2b; }
+body[data-page="community"] nav { background: #b8cfb0; box-shadow: 0 1px 6px rgba(60,30,30,0.10); }
+body[data-page="community"] nav .site-name { color: #1e2a1e; }
+body[data-page="community"] nav ul li > a { color: #2b3a2b; }
+body[data-page="community"] nav ul li > a:hover { background: rgba(255,255,255,0.3); color: #1e2a1e; }
+body[data-page="community"] nav ul li .dropdown { background: #b8cfb0; }
+body[data-page="community"] nav ul li .dropdown a { color: #2b3a2b; }
 body[data-page="community"] nav ul li .dropdown a:hover { background: rgba(255,255,255,0.25); }
 
-body[data-page="explore"] nav { background: #dbb8b0; box-shadow: 0 1px 6px rgba(60,30,30,0.10); }
-body[data-page="explore"] nav .site-name { color: #2b2020; }
-body[data-page="explore"] nav ul li > a { color: #3a2b2b; }
-body[data-page="explore"] nav ul li > a:hover { background: rgba(255,255,255,0.3); color: #2b2020; }
-body[data-page="explore"] nav ul li .dropdown { background: #dbb8b0; }
-body[data-page="explore"] nav ul li .dropdown a { color: #3a2b2b; }
+body[data-page="explore"] nav { background: #b8cfb0; box-shadow: 0 1px 6px rgba(60,30,30,0.10); }
+body[data-page="explore"] nav .site-name { color: #1e2a1e; }
+body[data-page="explore"] nav ul li > a { color: #2b3a2b; }
+body[data-page="explore"] nav ul li > a:hover { background: rgba(255,255,255,0.3); color: #1e2a1e; }
+body[data-page="explore"] nav ul li .dropdown { background: #b8cfb0; }
+body[data-page="explore"] nav ul li .dropdown a { color: #2b3a2b; }
 body[data-page="explore"] nav ul li .dropdown a:hover { background: rgba(255,255,255,0.25); }
 nav .nav-inner {
   width: 100%; max-width: var(--max-width);
