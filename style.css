@@ -75,6 +75,10 @@ body[data-page="about"] nav ul li .dropdown a { color: #2b3a2b; }
 body[data-page="about"] nav ul li .dropdown a:hover { background: rgba(255,255,255,0.25); }
 body[data-page="about"] { background-color: #ffffff; }
 body[data-page="about"]::before { display: none; }
+body[data-page="research"] { background-color: #ffffff; }
+body[data-page="research"]::before { display: none; }
+body[data-page="community"] { background-color: #ffffff; }
+body[data-page="community"]::before { display: none; }
 
 body[data-page="research"] nav { background: #b8cfb0; box-shadow: 0 1px 6px rgba(30,42,30,0.10); }
 body[data-page="research"] nav .site-name { color: #1e2a1e; }
